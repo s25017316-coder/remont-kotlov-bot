@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ремонт газовых котлов в Алматы и Алатау — remont-kotlov-almaty.kz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="welcome-modal" id="welcomeModal">
+        <div class="modal-content">
+            <h1>Добро пожаловать на remont-kotlov-almaty.kz</h1>
+            <p>Ремонт и обслуживание газовых котлов в Алматы и Алатау</p>
+
+            <form id="entryForm" action="#" method="POST">
+                <div class="form-group">
+                    <label for="citySelect">Откуда вы обращаетесь?</label>
+                    <select id="citySelect" name="city" required>
+                        <option value="" disabled selected>Выберите город или район...</option>
+                        <option value="Алматы">Алматы</option>
+                        <option value="Алатау (Жетыген)">Алатау (Жетыген)</option>
+                        <option value="Алатауский район">Алатауский район (Алматы)</option>
+                        <option value="Бостандыкский район">Бостандыкский район</option>
+                        <option value="Медеуский район">Медеуский район</option>
+                        <option value="Алмалинский район">Алмалинский район</option>
+                        <option value="Ауэзовский район">Ауэзовский район</option>
+                        <option value="Наурызбайский район">Наурызбайский район</option>
+                        <option value="Турксибский район">Турксибский район</option>
+                        <option value="Жетысуский район">Жетысуский район</option>
+                        <option value="other_district">Другой район / пригород (указать вручную)</option>
+                    </select>
+                </div>
+
+                <div class="form-group" id="customDistrictGroup" style="display: none;">
+                    <label for="customDistrict">Введите, из какого вы района или поселка:</label>
+                    <input type="text" id="customDistrict" name="custom_district" placeholder="Например: Каскелен, Талгар, Отеген-Батыр...">
+                </div>
+
+                <div class="form-group">
+                    <label for="source">Откуда вы узнали о нашем сайте?</label>
+                    <select id="source" name="source" required>
+                        <option value="" disabled selected>Выберите вариант...</option>
+                        <option value="TikTok">TikTok</option>
+                        <option value="Telegram">Telegram</option>
+                        <option value="YouTube">YouTube</option>
+                        <option value="Через знакомых">Через знакомых</option>
+                    </select>
+                </div>
+
+                <button type="submit">Перейти на сайт</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="site-wrapper" id="siteWrapper" style="display: none;">
+        <header class="navbar">
+            <div class="container nav-inner">
+                <div class="logo">remont-kotlov-almaty.kz</div>
+                <div class="user-location" id="displayLocation">Алматы и Алатау</div>
+                <a href="tel:+77715442786" class="nav-call-btn">+7 771 544 27 86</a>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <section class="hero">
+                <div class="container">
+                    <span class="badge">Выезд в течение 60 минут</span>
+                    <h1>Срочный ремонт газовых котлов в Алматы и Алатау</h1>
+                    <p>Диагностика, чистка теплообменников, замена плат и насосов. Ремонтируем Navien, Baxi, Ariston, Bosch, Buderus, Rinnai и другие марки с гарантией до 12 месяцев.</p>
+                    <div class="hero-actions">
+                        <a href="tel:+77715442786" class="btn-primary" id="directCallBtn">Позвонить: +7 771 544 27 86</a>
+                        <a href="https://wa.me/77715442786" target="_blank" rel="noopener noreferrer" class="btn-secondary" id="whatsappBtn">Написать в WhatsApp</a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="services">
+                <div class="container">
+                    <h2>Основные услуги</h2>
+                    <div class="grid">
+                        <div class="card">
+                            <h3>Диагностика и ремонт</h3>
+                            <p>Устранение ошибок розжига, утечек газа и воды, замена датчиков, клапанов и циркуляционных насосов.</p>
+                        </div>
+                        <div class="card">
+                            <h3>Промывка теплообменника</h3>
+                            <p>Химическая и гидродинамическая очистка от накипи для восстановления КПД и снижения расхода газа.</p>
+                        </div>
+                        <div class="card">
+                            <h3>Ремонт электронных плат</h3>
+                            <p>Восстановление плат управления после скачков напряжения без необходимости дорогой полной замены.</p>
+                        </div>
+                        <div class="card">
+                            <h3>Техническое обслуживание</h3>
+                            <p>Комплексная подготовка газового котла к отопительному сезону, настройка давления и чистка горелки.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="request-section">
+                <div class="container">
+                    <div class="request-box">
+                        <h2>Персональный вызов мастера</h2>
+                        <p>Заполните форму — сформируем персональную заявку на номер +7 771 544 27 86</p>
+                        <form id="callbackForm" class="callback-form">
+                            <input type="text" id="clientName" placeholder="Ваше имя" required>
+                            <input type="tel" id="clientPhone" placeholder="Ваш телефон (+7...)" required>
+                            <input type="text" id="boilerModel" placeholder="Марка котла (например: Navien, Baxi)">
+                            <button type="submit" class="btn-primary">Оформить вызов</button>
+                        </form>
+                        <div class="call-summary" id="callSummary" style="display: none;"></div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <div class="container">
+                <p>remont-kotlov-almaty.kz — Телефон: +7 771 544 27 86 — Алматы и Алатау</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,334 @@
+\* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #12151a;
+    color: #f1f5f9;
+    line-height: 1.5;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.welcome-modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(10, 12, 16, 0.9);
+    backdrop-filter: blur(8px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    z-index: 1000;
+}
+
+.modal-content {
+    background: #1e232b;
+    border: 1px solid #2e3642;
+    border-radius: 16px;
+    padding: 32px 28px;
+    width: 100%;
+    max-width: 460px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+    animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.modal-content h1 {
+    font-size: 22px;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 8px;
+    line-height: 1.3;
+}
+
+.modal-content p {
+    font-size: 14px;
+    color: #94a3b8;
+    margin-bottom: 24px;
+}
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    color: #cbd5e1;
+    margin-bottom: 8px;
+}
+
+.form-group select,
+.form-group input[type="text"],
+.callback-form input {
+    width: 100%;
+    padding: 12px 14px;
+    font-size: 15px;
+    color: #ffffff;
+    background-color: #14181f;
+    border: 1px solid #333c4a;
+    border-radius: 10px;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-group select:focus,
+.form-group input[type="text"]:focus,
+.callback-form input:focus {
+    border-color: #f97316;
+    box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.2);
+}
+
+input::placeholder {
+    color: #64748b;
+}
+
+button[type="submit"],
+.btn-primary {
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    padding: 14px 24px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #ffffff;
+    background: linear-gradient(135deg, #f97316, #ea580c);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.15s, box-shadow 0.2s, background 0.2s;
+}
+
+.modal-content button[type="submit"] {
+    width: 100%;
+    margin-top: 8px;
+}
+
+button[type="submit"]:hover,
+.btn-primary:hover {
+    background: linear-gradient(135deg, #fb923c, #f97316);
+    box-shadow: 0 8px 20px rgba(249, 115, 22, 0.35);
+}
+
+button[type="submit"]:active,
+.btn-primary:active {
+    transform: scale(0.98);
+}
+
+.navbar {
+    background: #181c23;
+    border-bottom: 1px solid #282f3a;
+    padding: 16px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.logo {
+    font-size: 18px;
+    font-weight: 700;
+    color: #f97316;
+}
+
+.user-location {
+    font-size: 14px;
+    color: #cbd5e1;
+    background: #232933;
+    padding: 6px 12px;
+    border-radius: 8px;
+}
+
+.nav-call-btn {
+    text-decoration: none;
+    color: #ffffff;
+    background: #28303d;
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: background 0.2s;
+}
+
+.nav-call-btn:hover {
+    background: #f97316;
+}
+
+.hero {
+    padding: 64px 0;
+    background: radial-gradient(circle at top right, rgba(249, 115, 22, 0.12), transparent 50%);
+}
+
+.badge {
+    display: inline-block;
+    background: rgba(249, 115, 22, 0.15);
+    color: #fb923c;
+    border: 1px solid rgba(249, 115, 22, 0.3);
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+
+.hero h1 {
+    font-size: 38px;
+    font-weight: 800;
+    line-height: 1.2;
+    max-width: 720px;
+    margin-bottom: 16px;
+}
+
+.hero p {
+    font-size: 17px;
+    color: #94a3b8;
+    max-width: 640px;
+    margin-bottom: 28px;
+}
+
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+.btn-secondary {
+    display: inline-block;
+    text-decoration: none;
+    padding: 14px 24px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #f1f5f9;
+    background: #1e232b;
+    border: 1px solid #333c4a;
+    border-radius: 10px;
+    transition: border-color 0.2s, background 0.2s;
+}
+
+.btn-secondary:hover {
+    border-color: #22c55e;
+    background: #192620;
+}
+
+.services {
+    padding: 48px 0;
+}
+
+.services h2 {
+    font-size: 28px;
+    margin-bottom: 24px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: #1e232b;
+    border: 1px solid #2e3642;
+    border-radius: 14px;
+    padding: 24px;
+}
+
+.card h3 {
+    font-size: 18px;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 14px;
+    color: #94a3b8;
+}
+
+.request-section {
+    padding: 48px 0 72px;
+}
+
+.request-box {
+    background: #1e232b;
+    border: 1px solid #2e3642;
+    border-radius: 16px;
+    padding: 36px 28px;
+}
+
+.request-box h2 {
+    font-size: 24px;
+    margin-bottom: 8px;
+}
+
+.request-box p {
+    color: #94a3b8;
+    margin-bottom: 24px;
+}
+
+.callback-form {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 14px;
+}
+
+.call-summary {
+    margin-top: 20px;
+    padding: 18px;
+    background: #14181f;
+    border: 1px solid #f97316;
+    border-radius: 12px;
+}
+
+.call-summary p {
+    margin-bottom: 12px;
+    color: #f1f5f9;
+}
+
+.summary-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.footer {
+    border-top: 1px solid #282f3a;
+    padding: 24px 0;
+    text-align: center;
+    font-size: 14px;
+    color: #64748b;
+}
+
+@media (max-width: 600px) {
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .user-location {
+        display: none
+    }
+}
